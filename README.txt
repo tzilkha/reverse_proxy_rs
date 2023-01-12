@@ -14,14 +14,16 @@ The server uses the `actix_web` library and reroutes all GET requests to a singl
 
 # Running
 
-Simply run
+Simply run,
 
 ```
 cargo run [origin] [port]
 ```
-cargo run blockstream.info 8080
+
+For example,
+
 ```
-cargo run [origin] [port]
+cargo run blockstream.info 8080
 ```
 
 Tests can easily be done through Postman or any other method localy `https://[origin]:[port]/[path?]`.
