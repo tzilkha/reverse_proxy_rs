@@ -29,4 +29,7 @@ cargo run blockstream.info 8080
 Tests can easily be done through Postman or any other method localy `https://[origin]:[port]/[path?]`.
 
 # Improvements
-Besides the improements made to cache optimization there are also areas where error handling could be better (invalid port, origin etc.). Additionally a way to dynamically decide the TTL on starting the program would be a better user experience - right now its fixed on 30 seconds. And many more..
+Besides the improements made to cache optimization there are also areas where error handling could be better (invalid port, origin etc.). Additionally a way to dynamically decide the TTL on starting the program would be a better user experience - right now its fixed on 30 seconds. 
+
+Additionally, as is there are ways to bypass the proxy (depending on the origin) for example, adding multiple slashes // for an origin such as blockstream causes the additional slashes to be removed, meaning that a user can make continuous requests, each one with an additional slash, and they would all check out as not being cached and the origin will be checked. This is origin dependant, different origins have their own vulnerabilities which can be taken into account.
+And many more..
